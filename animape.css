@@ -110,3 +110,51 @@
 .animape-visible[data-animape="zoomout"] {
   animation-name: animape-zoomout;
 }
+
+/* DEMO PURPOSE CSS BELOW */
+
+body {
+  background-color:  #fefefe;
+}
+
+.relative {
+  position: relative;
+  height: 3300px;
+}
+
+[data-animape] {
+ position: absolute;
+  max-width: 300px;
+}
+
+.first {
+  top: 300px;
+}
+
+.second {
+  top: 700px;
+  right: 0;
+}
+
+.third {
+  top: 1100px;
+}
+
+.fourth {
+  top: 1500px;
+  right: 0;
+  max-width: none;
+}
+
+.fifth {
+  top: 2100px;
+}
+
+.sixth {
+  top: 2500px;
+  right: 0;
+}
+
+.seventh {
+  top: 2900px;
+}
