@@ -22,7 +22,3 @@ class Animape {
     });
   }
 }
-
-const animape = new Animape();
-
-animape.init();
