@@ -15,5 +15,3 @@ function animape(params = {}) {
     observer.observe(el);
   });
 }
-
-animape();
