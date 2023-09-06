@@ -1,17 +1,24 @@
-function animape(params = {}) {
-  const selector = params.selector ? params.selector : '[data-animape]';
-  const distance = params.distance ? params.distance : 50;
-  const scrollElements = document.querySelectorAll(selector);
+class Animape {
+  constructor(params = {}) {
+    this.selector = params.selector ? params.selector : '[data-animape]';
+    this.distance = params.distance ? params.distance : 50;
+    this.verbose = params.verbose ? params.verbose : false;
+    this.scrollElements = document.querySelectorAll(this.selector);
+  }
 
-  scrollElements.forEach(el => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          el.classList.add('animape-visible');
-          observer.unobserve(el);
-        }
-      });
-    }, { rootMargin: `-${distance}px` });
-    observer.observe(el);
-  });
+  init() {
+    if (this.verbose) console.log(this);
+
+    this.scrollElements.forEach(el => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            el.classList.add('animape-visible');
+            observer.unobserve(el);
+          }
+        });
+      }, { rootMargin: `-${this.distance}px` });
+      observer.observe(el);
+    });
+  }
 }
