@@ -19,7 +19,8 @@ Animape let's you have control over some more specific features, these are done 
       
       animape({           
         selector: '[data-animape]', // selector for animape to target           
-        distance: 50 // buffer distance used to determine when to start animating         
+        distance: 50 // buffer distance used to determine when to start animating     
+        verbose: false //set to true to see helpful console logs
       });
       
       
