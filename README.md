@@ -3,12 +3,11 @@ A simple way to animate elements on scroll, just add `data-animape`
 
 ## How to use animape
 
-1.  [Download](https://github.com/matoululu/animape/) the CSS and JS files
-2.  Add them into your project with semantic HTML
-3.  Set it up `const animape = new Animape();`
-4.  Initialize it `animape.init();`
-5.  Add `data-animape` to any element you wish to animate on scroll
-6.  Done!
+1.  [Download](https://github.com/matoululu/animape/) Animape
+2.  Set it up `const animape = new Animape();`
+3.  Initialize it `animape.init();`
+4.  Add `data-animape` to any element you wish to animate on scroll
+5.  Done!
 
 
 ## Options
