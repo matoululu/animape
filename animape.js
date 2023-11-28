@@ -1,4 +1,4 @@
-class Animape {
+export default class Animape {
   constructor(params = {}) {
     this.selector = params.selector ? params.selector : '[data-animape]';
     this.distance = params.distance ? params.distance : 50;
