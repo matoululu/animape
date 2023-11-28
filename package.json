@@ -1,0 +1,26 @@
+{
+  "name": "animape",
+  "version": "1.0.0",
+  "description": "A simple way to animate elements on scroll, just add data-animape",
+  "main": "animape.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matoululu/animape.git"
+  },
+  "keywords": [
+    "css",
+    "js",
+    "animation",
+    "scroll",
+    "aos"
+  ],
+  "author": "matoululu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matoululu/animape/issues"
+  },
+  "homepage": "https://github.com/matoululu/animape#readme"
+}
