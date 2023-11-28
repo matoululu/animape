@@ -1,18 +1,28 @@
 # Animape
 A simple way to animate elements on scroll, just add `data-animape`
 
-## How to use animape
+## How to install animape
 
-1.  [Download](https://github.com/matoululu/animape/) Animape
+### NPM package
+
+1.  Install the package `npm i animape`
 2.  Import it into JS 
 ```
 import Animape from 'animape';
 import AnimapeStyles from 'animape/animape.css';
 ```
-3.  Set it up `const animape = new Animape();`
-4.  Initialize it `animape.init();`
-5.  Add `data-animape` to any element you wish to animate on scroll
-6.  Done!
+
+### CDN
+```
+<link rel="stylesheet" href="https://unpkg.com/animape@latest/animape.css">
+<script src="https://unpkg.com/animape@latest/animape.js"></script>
+```
+
+## How to use animape
+1.  Set it up `const animape = new Animape();`
+2.  Initialize it `animape.init();`
+3.  Add `data-animape` to any element you wish to animate on scroll
+4.  Done!
 
 
 ## Options
