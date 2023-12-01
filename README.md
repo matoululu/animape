@@ -1,6 +1,9 @@
 # Animape
 A simple way to animate elements on scroll, just add `data-animape`
 
+## Demo
+https://matoululu.github.io/animape/
+
 ## How to install animape
 
 ### NPM package
