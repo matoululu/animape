@@ -11,6 +11,7 @@
 
 .no-js [data-animape] {
   opacity: 1;
+  transform: none;
 }
 
 [data-animape] { opacity: 0; }
