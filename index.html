@@ -6,6 +6,7 @@
 <title>Animape - A simple way to animate elements on scroll</title>
 <link rel="stylesheet" href="https://unpkg.com/mvp.css">
 <link rel="stylesheet" href="./animape.css">
+<link href="favicon.png" rel="shortcut icon">
 <script src="./animape.js"></script>
 </head>
 <style>
@@ -17,8 +18,9 @@
 <body>
   <header>
     <nav>
-      <h1>🦧 Animape();</h1>
+      <h1>🦧 Animape</h1>
       <ul>
+        <li><a href="#install">Install</a></li>
         <li><a href="#howto">How to</a></li>
         <li><a href="#options">Options</a></li>
         <li><a href="#examples">Examples</a></li>
@@ -27,12 +29,28 @@
     <h1>A simple way to animate elements on scroll, just add <code>data-animape</code></h1>
     <p>Animape is lightweight and simple to setup! No fuss and no guessing, set up animated elements fast.</p>
     <a href="https://github.com/matoululu/animape/" target="_blank"><b>Download Animape ↗</b></a>
+    <a href="https://github.com/matoululu/animape/"><i>View docs ↗</i></a>
   </header>
   <hr>
   <main class="container">
+    <h2 id="install">Install</h2>
+    <h3>Download</h3>
+    <ul>
+      <li><a href="https://unpkg.com/animape@latest/animape.css">animape.css</a></li>
+      <li><a href="https://unpkg.com/animape@latest/animape.js">animape.js</a></li>
+    </ul>
+
+    <h3>CDN</h3>
+    <pre><code>&lt;!-- Animape CSS --&gt;
+&lt;link rel="stylesheet" href="https://unpkg.com/animape@latest/animape.css"&gt;</code></pre>
+    <pre><code>&lt;!-- Animape JS --&gt;
+&lt;script src="https://unpkg.com/animape@latest/animape.js"&gt;&lt;/script&gt;</code></pre>
+
+    <h3>NPM</h3>
+    <code>npm i animape</code>
+    <hr>
     <h2 id="howto">How to use animape</h2>
     <ol>
-      <li><a href="https://github.com/matoululu/animape/" target="_blank">Download Animape</a></li>
       <li>Set it up <code>const animape = new Animape();</code></li>
       <li>Initialize it <code>animape.init();</code></li>
       <li>Add <code>data-animape</code> to any element you wish to animate on scroll</li>
