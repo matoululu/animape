@@ -17,6 +17,11 @@ class Animape {
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
+
+    // Listen for unregister events
+    document.addEventListener('animape:unregister', e => {
+      this.unregister(e.detail.element);
+    });
   }
 
   init() {
@@ -38,5 +43,13 @@ class Animape {
       }, { rootMargin: `-${this.distance}px` });
       observer.observe(el);
     });
+  }
+
+  unregister(element) {
+    if (this.verbose) console.log("Unregistering: ", element);
+    if (!element.classList.contains('animape')) return; // Not initialized
+
+    element.classList.remove('animape');
+    element.classList.remove('animape-visible');
   }
 }

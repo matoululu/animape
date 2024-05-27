@@ -123,7 +123,9 @@
       <div class="seventh" data-animape="zoomout">
         <h3>data-animape="zoomout"</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat commodi quia nihil quas voluptatum soluta libero impedit cupiditate facere porro! Aspernatur nobis excepturi distinctio, fugit error dicta at quidem. Aperiam?</p>
-    </div>
+      </div>
+
+      <button style="margin-top: 3.5rem;">Unregister examples</button>
 
   </main>
 
@@ -134,6 +136,25 @@
   <script>
     const animape = new Animape({
       verbose: true,
+    });
+
+    const button = document.querySelector('button');
+    const examples = document.querySelectorAll('[data-animape]');
+
+    button.addEventListener('click', () => {
+      examples.forEach(example => {
+        animape.unregister(example);
+      });
+
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      });
+
+      setTimeout(() => {
+        animape.init();
+      }, 500);
     });
 
     animape.init();
