@@ -17,6 +17,12 @@ export default class Animape {
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
+
+    // Listen for unregister events
+    document.addEventListener('animape:unregister', e => {
+      if (this.verbose) console.log("Animape unregistering: ", e.detail.elementsArray);
+      this.unregisterElement(e.detail.elementsArray);
+    });
   }
 
   init() {
@@ -37,6 +43,18 @@ export default class Animape {
         });
       }, { rootMargin: `-${this.distance}px` });
       observer.observe(el);
+    });
+  }
+
+  unregisterElement(elements = []) {
+    elements.forEach(el => {
+      el.classList.remove('animape');
+      el.classList.remove('animape-visible');
+
+      const observer = this.getObserver(el);
+      if (observer) observer.unobserve(el);
+
+      this.animapeElements = Array.from(this.animapeElements).filter(item => item !== el);
     });
   }
 }
