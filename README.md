@@ -9,7 +9,7 @@ https://matoululu.github.io/animape/
 ### NPM package
 
 1.  Install the package `npm i animape`
-2.  Import it into JS 
+2.  Import it into JS
 ```
 import Animape from 'animape';
 import AnimapeStyles from 'animape/animape.css';
@@ -34,15 +34,21 @@ Animape let's you have control over some more specific features, these are done 
 
 ### Initialization:
 
-      
-      animape({           
-        selector: '[data-animape]', // selector for animape to target           
-        distance: 50 // buffer distance used to determine when to start animating     
+
+      animape({
+        selector: '[data-animape]', // selector for animape to target
+        distance: 50 // buffer distance used to determine when to start animating
         verbose: false //set to true to see helpful console logs
       });
-      
-      
-    
+
+
+
+
+### Unregistering:
+
+If you wish to unregister an animape element you can do so by calling `animape.unregister(element);`
+
+It is worth noting that if an element has not yet been initialized by Animape, it will not be unregistered.
 
 ### HTML Elements:
 

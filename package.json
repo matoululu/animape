@@ -1,6 +1,6 @@
 {
   "name": "animape",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A simple way to animate elements on scroll, just add data-animape",
   "main": "animape.js",
   "scripts": {
