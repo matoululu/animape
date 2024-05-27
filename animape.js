@@ -20,8 +20,7 @@ export default class Animape {
 
     // Listen for unregister events
     document.addEventListener('animape:unregister', e => {
-      if (this.verbose) console.log("Animape unregistering: ", e.detail.elementsArray);
-      this.unregisterElement(e.detail.elementsArray);
+      this.unregister(e.detail.element);
     });
   }
 
@@ -46,15 +45,11 @@ export default class Animape {
     });
   }
 
-  unregisterElement(elements = []) {
-    elements.forEach(el => {
-      el.classList.remove('animape');
-      el.classList.remove('animape-visible');
+  unregister(element) {
+    if (this.verbose) console.log("Unregistering: ", element);
+    if (!element.classList.contains('animape')) return; // Not initialized
 
-      const observer = this.getObserver(el);
-      if (observer) observer.unobserve(el);
-
-      this.animapeElements = Array.from(this.animapeElements).filter(item => item !== el);
-    });
+    element.classList.remove('animape');
+    element.classList.remove('animape-visible');
   }
 }
