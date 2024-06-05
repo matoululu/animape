@@ -25,24 +25,32 @@ export default class Animape {
   }
 
   init() {
-    if (this.verbose) console.log("Animape: ", this);
+    if (this.verbose) console.log('Animape: ', this)
 
     // Set up IntersectionObserver for each animape element
-    this.animapeElements.forEach(el => {
-      if (el.classList.contains('animape')) return; // Already initialized
+    this.animapeElements.forEach((el) => {
+      if (el.classList.contains('animape')) return // Already initialized
 
-      el.classList.add('animape');
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            if (this.verbose) console.log("Animape triggered by: ", el);
-            el.classList.add('animape-visible');
-            observer.unobserve(el);
-          }
-        });
-      }, { rootMargin: `-${this.distance}px` });
-      observer.observe(el);
-    });
+      let marginDistance = `-${this.distance}px`
+
+      if (el.classList.contains('animape-instant')) marginDistance = `0`;
+
+      el.classList.add('animape')
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (this.verbose) console.log('Animape triggered by: ', el)
+              el.classList.add('animape-visible')
+              observer.unobserve(el)
+            }
+          })
+        },
+        { rootMargin: marginDistance }
+      )
+      observer.observe(el)
+    })
   }
 
   unregister(element) {
