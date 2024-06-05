@@ -66,7 +66,7 @@
       <code>
         animape({
           selector: '[data-animape]', // selector for animape to target
-          distance: 50 // buffer distance used to determine when to start animating
+          distance: 50, // buffer distance used to determine when to start animating
           verbose: false // set to true to see helpful console logs
         });
       </code>
@@ -76,6 +76,11 @@
     <p>If you wish to unregister an animape element you can do so by calling <code>animape.unregister(element);</code></p>
     <p>It is worth noting that if an element has not yet been initialized by Animape, it will not be unregistered.</p>
 
+    <h3>Special classes</h3>
+    <p>Animape supports "special classes" which can override animape's functionality.</p>
+    <ul>
+      <li><code>.animape-instant</code> will ensure that the buffer distance is set to 0 ensuring the moment it shows up that it will appear.</li>
+    </ul>
     <h3>HTML Elements:</h3>
     <p>You can assign a value to <code>data-animape</code> attribute, these values will determine what sort of animation the element will display.</p>
     <ul>
