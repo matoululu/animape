@@ -29,13 +29,10 @@ export default class Animape {
 
     // Set up IntersectionObserver for each animape element
     this.animapeElements.forEach((el) => {
-      if (el.classList.contains('animape')) return // Already initialized
+      if (el.classList.contains('animape')) return; // Already initialized
+      const marginDistance = `-${el.dataset.animapeDistance ? el.dataset.animapeDistance : this.distance}px`;
 
-      let marginDistance = `-${this.distance}px`
-
-      if (el.classList.contains('animape-instant')) marginDistance = '0px';
-
-      el.classList.add('animape')
+      el.classList.add('animape');
 
       const observer = new IntersectionObserver(
         (entries) => {
@@ -49,7 +46,7 @@ export default class Animape {
         },
         { rootMargin: marginDistance }
       )
-      observer.observe(el)
+      observer.observe(el);
     })
   }
 

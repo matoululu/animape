@@ -34,23 +34,13 @@ Animape let's you have control over some more specific features, these are done 
 
 ### Initialization:
 
-
       animape({
         selector: '[data-animape]', // selector for animape to target
         distance: 50 // buffer distance used to determine when to start animating
         verbose: false //set to true to see helpful console logs
       });
 
-
-
-
-### Unregistering:
-
-If you wish to unregister an animape element you can do so by calling `animape.unregister(element);`
-
-It is worth noting that if an element has not yet been initialized by Animape, it will not be unregistered.
-
-### HTML Elements:
+### Modifying the animation (optional)
 
 You can assign a value to `data-animape` attribute, these values will determine what sort of animation the element will display.
 
@@ -61,3 +51,14 @@ You can assign a value to `data-animape` attribute, these values will determine 
 *   **faderight**: fade in from right
 *   **zoomin**: zoom in from center
 *   **zoomout**: zoom out from center
+
+
+### Modifying the distance (optional)
+
+You can add `data-animape-distance` to an animape element and add a value to it, this will determine the distance from the top of the viewport that the element will start animating.
+
+### Unregistering:
+
+If you wish to unregister an animape element you can do so by calling `animape.unregister(element);`
+
+It is worth noting that if an element has not yet been initialized by Animape, it will not be unregistered.
