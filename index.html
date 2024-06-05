@@ -11,8 +11,7 @@
 </head>
 <style>
   body {
-    background-color: #f2f4f6;
-    color: #232;
+    background-color: #f4f6f8;
   }
 </style>
 <body>
@@ -31,7 +30,6 @@
     <a href="https://github.com/matoululu/animape/" target="_blank"><b>Download Animape ↗</b></a>
     <a href="https://github.com/matoululu/animape/"><i>View docs ↗</i></a>
   </header>
-  <hr>
   <main class="container">
     <h2 id="install">Install</h2>
     <h3>Download</h3>
@@ -48,6 +46,7 @@
 
     <h3>NPM</h3>
     <code>npm i animape</code>
+
     <hr>
     <h2 id="howto">How to use animape</h2>
     <ol>
@@ -57,80 +56,45 @@
       <li>Done!</li>
     </ol>
 
-    <hr>
-
-    <h2 id="options">Options</h2>
-    <p>Animape let's you have control over some more specific features, these are done at initialization and at an html element level as well.</p>
-    <h3>Initialization:</h3>
-    <pre>
-      <code>
-        animape({
-          selector: '[data-animape]', // selector for animape to target
-          distance: 50, // buffer distance used to determine when to start animating
-          verbose: false // set to true to see helpful console logs
-        });
-      </code>
-    </pre>
-
-    <h3>Unregistering</h3>
-    <p>If you wish to unregister an animape element you can do so by calling <code>animape.unregister(element);</code></p>
-    <p>It is worth noting that if an element has not yet been initialized by Animape, it will not be unregistered.</p>
-
-    <h3>Special classes</h3>
-    <p>Animape supports "special classes" which can override animape's functionality.</p>
-    <ul>
-      <li><code>.animape-instant</code> will ensure that the buffer distance is set to 0 ensuring the moment it shows up that it will appear.</li>
-    </ul>
-    <h3>HTML Elements:</h3>
-    <p>You can assign a value to <code>data-animape</code> attribute, these values will determine what sort of animation the element will display.</p>
-    <ul>
-      <li><strong>fadein</strong>: default animation. 0 to 1 opacity</li>
-      <li><strong>fadeup</strong>: fade in from bottom</li>
-      <li><strong>fadedown</strong>: fade in from top</li>
-      <li><strong>fadeleft</strong>: fade in from left</li>
-      <li><strong>faderight</strong>: fade in from right</li>
-      <li><strong>zoomin</strong>: zoom in from center</li>
-      <li><strong>zoomout</strong>: zoom out from center</li>
-    </ul>
-
+    <p>You can learn more by checking out our docs <a href="https://github.com/matoululu/animape/">View docs ↗</a></p>
     <hr>
 
     <div class="relative">
       <h2 id="examples">Examples</h2>
       <p>Scroll down below to see some examples of how animape works!</p>
 
-      <div class="first" data-animape>
-        <h3>data-animape="fadein"</h3>
+      <div class="first" data-animape data-animape-distance="0">
+        <h3>1. data-animape="fadein"</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat commodi quia nihil quas voluptatum soluta libero impedit cupiditate facere porro! Aspernatur nobis excepturi distinctio, fugit error dicta at quidem. Aperiam?</p>
       </div>
 
       <div class="second" data-animape="fadeup">
-        <h3>data-animape="fadeup"</h3>
+        <h3>2. data-animape="fadeup"</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat commodi quia nihil quas voluptatum soluta libero impedit cupiditate facere porro! Aspernatur nobis excepturi distinctio, fugit error dicta at quidem. Aperiam?</p>
       </div>
 
       <div class="third" data-animape="fadedown">
-        <h3>data-animape="fadedown"</h3>
+        <h3>3. data-animape="fadedown"</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat commodi quia nihil quas voluptatum soluta libero impedit cupiditate facere porro! Aspernatur nobis excepturi distinctio, fugit error dicta at quidem. Aperiam?</p>
       </div>
 
       <div class="fourth" data-animape="faderight">
-        <h3>data-animape="faderight"</h3>
+        <h3>4. data-animape="faderight"</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat commodi quia nihil quas voluptatum soluta libero impedit cupiditate facere porro! Aspernatur nobis excepturi distinctio, fugit error dicta at quidem. Aperiam?</p>
       </div>
 
       <div class="fifth" data-animape="fadeleft">
-        <h3>data-animape="fadeleft"</h3>
+        <h3>5. data-animape="fadeleft"</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat commodi quia nihil quas voluptatum soluta libero impedit cupiditate facere porro! Aspernatur nobis excepturi distinctio, fugit error dicta at quidem. Aperiam?</p>
       </div>
 
       <div class="sixth" data-animape="zoomin">
-        <h3>data-animape="zoomin"</h3>
+        <h3>6. data-animape="zoomin"</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat commodi quia nihil quas voluptatum soluta libero impedit cupiditate facere porro! Aspernatur nobis excepturi distinctio, fugit error dicta at quidem. Aperiam?</p>
       </div>
 
       <div class="seventh" data-animape="zoomout">
-        <h3>data-animape="zoomout"</h3>
+        <h3>7. data-animape="zoomout"</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat commodi quia nihil quas voluptatum soluta libero impedit cupiditate facere porro! Aspernatur nobis excepturi distinctio, fugit error dicta at quidem. Aperiam?</p>
       </div>
 
