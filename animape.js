@@ -33,7 +33,7 @@ export default class Animape {
 
       let marginDistance = `-${this.distance}px`
 
-      if (el.classList.contains('animape-instant')) marginDistance = `0`;
+      if (el.classList.contains('animape-instant')) marginDistance = '0px';
 
       el.classList.add('animape')
 
